@@ -71,7 +71,8 @@ completion = client.chat.completions.create(
 )
 while True:
     user_input = input("User (Exit to quit): ")
-    if user_input.lower == "exit":
+    user_input_lower = user_input.lower()
+    if user_input_lower == "exit":
         break
     chat_prompt = [
         {
